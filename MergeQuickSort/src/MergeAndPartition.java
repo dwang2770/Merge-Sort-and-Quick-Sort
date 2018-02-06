@@ -1,40 +1,35 @@
 
 public class MergeAndPartition 
 {
-	public static int[] Merge (int [] list1, int[]list2)
+	public static String[] Merge (String [] list1, String [] list2)
 	{
-		int [] list3 = new int[list1.length + list2.length];
+		String [] list3 = new String [list1.length + list2.length];
 		int i = 0;
 		int j = 0;
 		int k = 0;
-		int counter=0;
-		int indexOfList2 = 0;
-		while (i < list1.length)
+		
+		while (i < list1.length && j < list2.length)
 		{
-			if (list1[i] < list2[j])
+			
+			if (list1[i].compareTo(list2[j]) < 0)
 			{
 				list3[k] = list1[i];
+				i++;
 				k++;
-				counter++;
 			}
-			if (list1[i] > list2[j])
+			
+			if (list1[i].compareTo(list2[j]) > 0)
 			{
 				list3[k] = list2[j];
-				k++;
 				j++;
-				i--;
-				counter++;
-				indexOfList2++;
+				k++;
 			}
 		
-		i++;
+	
 		}
 		
-		for (indexOfList2; indexOfList2 < List2.length; indexOfList2++)
-		{
-			list3[counter] = list2[indexOfList2];
-		}
+	
 		
-	return list3;
+		return list3;
 	}
 }
