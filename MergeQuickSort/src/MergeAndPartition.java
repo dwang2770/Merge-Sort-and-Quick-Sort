@@ -8,17 +8,17 @@ public class MergeAndPartition
 		int j = 0;
 		int k = 0;
 		
-		while (i < list1.length && j < list2.length)
+		while (i < list1.length && j < list2.length && k < list3.length)
 		{
 			
-			if (list1[i].compareTo(list2[j]) < 0)
+			if (list1[i].compareTo(list2[j]) <= 0)
 			{
 				list3[k] = list1[i];
 				i++;
 				k++;
 			}
 			
-			if (list1[i].compareTo(list2[j]) > 0)
+			else if (list1[i].compareTo(list2[j]) > 0)
 			{
 				list3[k] = list2[j];
 				j++;
@@ -28,8 +28,34 @@ public class MergeAndPartition
 	
 		}
 		
-	
+		if (j == list2.length)
+		{
+			for (int x = i; x < list1.length; x++)
+			{
+				list3[k] = list1[x];
+				k++;
+			}
+		}
+		
+		if (i == list1.length)
+		{
+			for (int y = j; y < list2.length; y++)
+			{
+				list3[k] = list1[y];
+				k++;
+			}
+		}
 		
 		return list3;
+	}
+	
+	public static int Partition(int [] list)
+	{
+		int pivot = list[0];
+		
+		for (int x : list)
+		{
+			
+		}
 	}
 }
