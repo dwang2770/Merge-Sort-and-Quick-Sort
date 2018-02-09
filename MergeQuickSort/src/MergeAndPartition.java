@@ -49,13 +49,33 @@ public class MergeAndPartition
 		return list3;
 	}
 	
-	public static int Partition(int [] list)
+	public static int Partition (int [] list)
 	{
-		int pivot = list[0];
-		
-		for (int x : list)
+		int indexBase = 0;
+		int pivot = list[indexBase];
+		int last = list.length-1;
+		for (int i = 1; i < list.length; i++)
 		{
+			if (list[i] <= pivot)
+			{
+				intSwap(list, i , i-1);
+				indexBase = i;
+			}
 			
+			else if (list[i] > pivot && last > i)
+			{
+				intSwap(list, i, last);
+				last--;
+				i--;
+			}
 		}
+		return indexBase;
+	}
+
+	public static void intSwap (int [] arr, int index1, int index2)
+	{
+		int y = arr[index1];
+		arr[index1] = arr[index2];
+		arr[index2] = y;
 	}
 }
