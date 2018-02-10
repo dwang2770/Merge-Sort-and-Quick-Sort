@@ -1,4 +1,5 @@
-
+// Dave Wang Merge And Quick Sort
+// 2/9/18
 public class Runner {
 
 	public static void main(String[] args) 
