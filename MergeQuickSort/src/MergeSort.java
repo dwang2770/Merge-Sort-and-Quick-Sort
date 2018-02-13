@@ -1,3 +1,4 @@
+import java.util.Arrays;
 
 public class MergeSort 
 {
@@ -9,44 +10,14 @@ public class MergeSort
 		}
 		int halfLength = list.length/2;
 		String [] list2 = new String [halfLength];
+		String [] list3 = new String [list.length-list2.length];
 		
-		for (int x = 0; x < list2.length; x++)
-		{
-			list2[x] = list[x];
-		}
+		list2 = Arrays.copyOfRange(list, 0, halfLength);
+		list3 = Arrays.copyOfRange(list, list2.length+1, list.length);
 	
-		if (halfLength*2 != list.length)
-		{
-			String [] list3 = new String[halfLength + 1];
-			
-			for (int y = halfLength+1; y < list.length; y++)
-			{
-				list3[y] = list[y];
-			}
-			
-			list = new String[halfLength+1];
-			for (int z = halfLength+1; z < list.length; z++)
-			{
-				list[z] = list3[z];
-			}
-		}
-		else if (halfLength*2 == list.length)
-		{
-			String [] list3 = new String[halfLength];
-			
-			for (int y = halfLength+1; y < list.length; y++)
-			{
-				list3[y] = list[y];
-			}
-			
-			list = new String[halfLength+1];
-			for (int z = halfLength+1; z < list.length; z++)
-			{
-				list[z] = list3[z];
-			}
-		}
 		
-		return (mergeSort(MergeAndPartition.Merge(list2, list)));
+		
+		return (mergeSort(MergeAndPartition.Merge(list2, list3)));
 		
 	}
 }

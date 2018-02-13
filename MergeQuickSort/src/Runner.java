@@ -32,6 +32,7 @@ public class Runner {
 			System.out.print(y + " ");
 		}
 	
+		System.out.println();
 		String [] test4 = {"b", "c", "f", "k", "a", "z",};
 		MergeSort.mergeSort(test4);
 		for (String z : test4)
