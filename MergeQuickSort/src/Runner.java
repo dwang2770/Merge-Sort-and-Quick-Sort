@@ -4,7 +4,7 @@ public class Runner {
 
 	public static void main(String[] args) 
 	{
-		
+		//Test for Merge and Partition Helper Method
 		String [] test1 = {"apple", "cucumber", "microsoft", "zorro"};
 		String [] test2 = {"banna", "cherry", "mahogany", "oreos", "pinata"};
 		int [] test3 = {3,4,2,7,12,22,0,1};
@@ -31,6 +31,14 @@ public class Runner {
 		{
 			System.out.print(y + " ");
 		}
+	
+		String [] test4 = {"b", "c", "f", "k", "a", "z",};
+		MergeSort.mergeSort(test4);
+		for (String z : test4)
+		{
+			System.out.print(z + ", ");
+		}
+	
 	}
 
 }
