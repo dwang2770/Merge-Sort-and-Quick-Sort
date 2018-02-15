@@ -19,7 +19,7 @@ public class Runner {
 		{
 			System.out.print(x + ", ");
 		}
-		
+		System.out.println();
 		start = System.nanoTime();
 		int pivotFinalPosition = MergeAndPartition.Partition(test3);
 		end = System.nanoTime();
@@ -34,8 +34,8 @@ public class Runner {
 	
 		System.out.println();
 		String [] test4 = {"b", "c", "f", "k", "a", "z",};
-		MergeSort.mergeSort(test4);
-		for (String z : test4)
+		String [] result = MergeSort.mergeSort(test4);
+		for (String z : result)
 		{
 			System.out.print(z + ", ");
 		}
