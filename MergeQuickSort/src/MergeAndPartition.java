@@ -80,6 +80,29 @@ public class MergeAndPartition
 		}
 		return indexBase;
 	}
+
+	public static int partition2(int [] list, int front, int back)
+    {
+        //pivot is the last number
+		int pivot = list[back]; 
+		// index of smaller element
+		int i = (front - 1); 
+        //for loop that goes through the whole array
+        for (int j=front; j<back; j++)
+        {
+            // If list[j] is smaller than or equal to pivot swap arr[i] and arr[j]
+            if (list[j] <= pivot)
+            {
+                i++;
+               intSwap(list,i,j);
+            }
+        }
+ 
+        // swap arr[i+1] and arr[back]
+       intSwap(list,i+1,back );
+ 
+        return i+1;
+    }
 	
 	//swap helper method
 	public static void intSwap (int [] arr, int index1, int index2)

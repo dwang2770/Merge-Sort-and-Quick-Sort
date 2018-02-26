@@ -2,7 +2,7 @@ import java.util.Arrays;
 
 public class MergeSort 
 {
-	public static String [] mergeSort(String [] list)
+	public static String [] mergeSorts(String [] list)
 	{
 		
 		
@@ -12,13 +12,9 @@ public class MergeSort
 		}
 		else 
 		{
-			int halfLength = list.length/2;
-			String [] list2 = new String [halfLength];
-			String [] list3 = new String [list.length-list2.length];
-			
-			list2 = Arrays.copyOfRange(list, 0, halfLength);
-			list3 = Arrays.copyOfRange(list, list2.length+1, list.length);
-			return (mergeSort(MergeAndPartition.Merge(list2, list3)));
+			String [] list2 = Arrays.copyOfRange(list, 0, list.length/2);
+			String [] list3 = Arrays.copyOfRange(list, list.length/2, list.length);
+			return (MergeAndPartition.Merge(mergeSorts(list2), mergeSorts(list3)));
 		}
 		
 		
