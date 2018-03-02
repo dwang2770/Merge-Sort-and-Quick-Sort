@@ -43,16 +43,23 @@ public class Runner {
 		*/
 		
 		int [] test3 = {3,4,2,7,12,22,0,1};
+		long start = System.nanoTime();
 		QuickSort.quickSort(test3, 0, test3.length-1);
+		long end = System.nanoTime();
+		long time = end - start;
+		System.out.println("QuickSort Took: " + time + " nanoseconds");
 		for (int y : test3)
 		{
 			System.out.print(y + " ");
 		}
-		
-		String [] test1 = {"ap", "ple", "cucum" , "ber", "micr", "oso", "ft", "zo",};
-		MergeSort.mergeSorts(test1);
 		System.out.println();
-		for (String x : test1)
+		String [] test1 = {"ap", "ple", "cucum" , "ber", "micr", "oso", "ft", "zo",};
+		start = System.nanoTime();
+		String [] result = MergeSort.mergeSorts(test1);
+		end = System.nanoTime();
+		time = end - start;
+		System.out.println("MergeSort Took: " + time + " nanoseconds");
+		for (String x : result)
 		{
 			System.out.print(x + ", ");
 		}
