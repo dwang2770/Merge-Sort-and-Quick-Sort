@@ -4,7 +4,7 @@ public class Runner {
 
 	public static void main(String[] args) 
 	{
-		/*
+		/*testing code for lab 3.2
 		//Test for Merge and Partition Helper Method
 		String [] test1 = {"apple", "cucumber", "microsoft", "zorro"};
 		String [] test2 = {"banna", "cherry", "mahogany", "oreos", "pinata"};
@@ -42,6 +42,7 @@ public class Runner {
 		}
 		*/
 		
+		//testing code for lab 3.3
 		int [] test3 = {3,4,2,7,12,22,0,1};
 		long start = System.nanoTime();
 		QuickSort.quickSort(test3, 0, test3.length-1);

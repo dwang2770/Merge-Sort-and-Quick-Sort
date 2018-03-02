@@ -1,5 +1,6 @@
 // Dave Wang Merge And Partition helper method
 // 2/9/18
+//partition and merge part of lab 3.2
 public class MergeAndPartition 
 {
 	public static String[] Merge (String [] list1, String [] list2)
@@ -80,6 +81,7 @@ public class MergeAndPartition
 		}
 		return indexBase;
 	}
+	
 	//Dave Wang
 	//2/25/18(completed)
 	//partition used for quick sort (lab 3.3)

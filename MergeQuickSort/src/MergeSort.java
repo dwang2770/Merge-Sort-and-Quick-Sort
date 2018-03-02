@@ -1,5 +1,6 @@
 //Dave Wang
 //2/25/18(completed)
+//part of lab 3.3
 import java.util.Arrays;
 
 public class MergeSort 
