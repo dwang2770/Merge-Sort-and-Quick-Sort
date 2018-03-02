@@ -1,4 +1,5 @@
-
+//Dave Wang
+//2/25/18(completed)
 public class QuickSort 
 {
 	public static void quickSort(int arr[], int low, int high)

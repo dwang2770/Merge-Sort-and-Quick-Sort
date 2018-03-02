@@ -80,7 +80,10 @@ public class MergeAndPartition
 		}
 		return indexBase;
 	}
-
+	//Dave Wang
+	//2/25/18(completed)
+	//partition used for quick sort (lab 3.3)
+	//source: geeksforgeeks
 	public static int partition2(int [] list, int front, int back)
     {
         //pivot is the last number
@@ -90,17 +93,29 @@ public class MergeAndPartition
         //for loop that goes through the whole array
         for (int j=front; j<back; j++)
         {
-            // If list[j] is smaller than or equal to pivot swap arr[i] and arr[j]
+            /* If list[j] is smaller than or equal to pivot swap arr[i] and arr[j]
+               example arry nums = {1,5,2,3}
+               
+               in this case j will be 1 and i will be -1
+               since 1 is less than 3 we will swap 1 with int at position i(0; which is int 1)
+               
+               after we check that 5 is greater than 3 and we do nothing
+               we then check that 2 is less that 3, at this moment i is now 1(0 + 1) and we will swap 2 with position 1(int 5)
+               
+               after this we are at int 3 which is the last number in the array and ends the for loop
+            */
             if (list[j] <= pivot)
             {
                 i++;
                intSwap(list,i,j);
             }
         }
- 
-        // swap arr[i+1] and arr[back]
+        /*
+         * after all that sorting we are guaranteed that all the ints smaller than the pivot is before position i and i itself
+         * so at the very end we will swap the pivot(arr[back]) with the int at position i +1
+         */
        intSwap(list,i+1,back );
- 
+       //returns i+1 because i is always 1 less than the index due to front -1
         return i+1;
     }
 	
